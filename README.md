@@ -12,7 +12,7 @@ Inspired by the following githup repos:
 Content:
 - [neural_transfer](neural_transfer.ipynb)
 Simple cnn for combining style and content image.
-- [nerual_transfer_using_image_segmentation](neural_transfer_using_image_segmentation.ipynb)
+- [neural_transfer_using_image_segmentation](neural_transfer_using_image_segmentation.ipynb)
 Advanced approach, where segmentation maps are used in order to define classes.
 - [transfer.py](transfer.py) 
 A fast tensorflow implementation based on [gargimahale/Doodle](https://github.com/gargimahale/Doodle/blob/master/stylize.py) which implements Neural Doodles.
