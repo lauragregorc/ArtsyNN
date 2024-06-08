@@ -1,0 +1,5 @@
+services:
+  ki_ident_processor:
+    image: neural_transfer
+    container_name: neural_transfer_processor
+    restart: unless-stopped
