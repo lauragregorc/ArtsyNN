@@ -3,3 +3,4 @@ services:
     image: neural_transfer
     container_name: neural_transfer_processor
     restart: unless-stopped
+    entrypoint: /bin/sh -c 'tail anything -F'  # -F for endless and anything for entrypoint

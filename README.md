@@ -2,6 +2,7 @@
 A easy tutorial to generate images like a real artist. This repository is a tutorial to neural art transfer using neural networks. In general, the texture of a given style image is extracted and applied onto a content image.
 
 ![Example for art transfer](material/exampleImage.png)
+![Example for art transfer](material/exampleImage2.png)
 
 Theory based on following papers:
 - [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576)
@@ -12,10 +13,8 @@ Not only real artistic styles can be transfered, but also characteristics of fac
 ## Overview
 - [neural_transfer](neural_transfer.ipynb)
 Simple cnn for combining style and content image.
-- [neural_transfer_using_image_segmentation](/neural_transfer_using_image_segmentation)
-Advanced approach, where segmentation maps are used in order to define classes.
-- [/neural_transfer_using_image_segmentation/transfer.py](transfer.py) 
-A fast tensorflow implementation based on [gargimahale/Doodle](https://github.com/gargimahale/Doodle/blob/master/stylize.py) which implements Neural Doodles.
+- [neural_transfer_using_image_segmentation](https://github.com/gargimahale/Doodle/blob/master/stylize.py)
+Advanced approach, where segmentation maps are used in order to define classes. A fast tensorflow implementation based on [gargimahale/Doodle](https://github.com/gargimahale/Doodle/blob/master/stylize.py) which implements Neural Doodles.
 - [/input](/input) Some example style and content images are provided in the directory input.
 - [/output](/output) This directory saves all generated images.
 
@@ -38,19 +37,42 @@ To shut down the container:
 docker compose down
 ```
 
+```
+jupyter execute neural_transfer.ipynb
+```
+
 And connect the running container to your IDE.
 
 ### Without Docker
 If you don't have Docker and Docker Desktop available, please create a python virtual environment, see [Python env](https://docs.python.org/3/library/venv.html). Or you can use [Poetry](https://python-poetry.org/). 
 #### Poetry
-```peotry install```
+```
+peotry install
+```
 
 ##### Pip
-```python -m venv install -r requirements.txt``` 
-# Advanced Topics
+```
+python -m .venv install -r requirements.txt
+``` 
+
+
+### Advances Topics
+
+Check out the segmentation page: [alexjc/neural-doodle](https://github.com/alexjc/neural-doodle)
+
+There is also a docker container available: 
+```
+# Setup the alias. Put this in your .bash_rc or .zshrc file so it's available at startup.
+alias doodle="docker run -v $(pwd)/samples:/nd/samples -v $(pwd)/frames:/nd/frames \
+                         -it alexjc/neural-doodle"
+
+# Now run any of the examples above using this alias, without the `.py` extension.
+doodle --help
+```
 
 
 # References
 Inspired by the following githup repos:
 - [alexjc/neural-doodle](https://github.com/alexjc/neural-doodle)
 - [gargimahale/Doodle](https://github.com/gargimahale/Doodle/blob/master/stylize.py) 
+- [winston6/tutorials](https://github.com/winston6)
