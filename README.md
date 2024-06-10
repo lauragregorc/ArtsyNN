@@ -11,37 +11,32 @@ Theory based on following papers:
 Not only real artistic styles can be transfered, but also characteristics of faces. The possibilities are endless.
 
 ## Overview
-- [neural_transfer](neural_transfer.ipynb)
+- [neural_transfer](/src/neural_transfer.ipynb)
 Simple cnn for combining style and content image.
 - [neural_transfer_using_image_segmentation](https://github.com/gargimahale/Doodle/blob/master/stylize.py)
 Advanced approach, where segmentation maps are used in order to define classes. A fast tensorflow implementation based on [gargimahale/Doodle](https://github.com/gargimahale/Doodle/blob/master/stylize.py) which implements Neural Doodles.
-- [/input](/input) Some example style and content images are provided in the directory input.
-- [/output](/output) This directory saves all generated images.
+- [/src/input](/input) Some example style and content images are provided in the directory input.
+- [/src/output](/output) This directory saves all generated images.
 
 ## Usage
 This repository is deployed with docker. But the jupyterlab requires a python kernel. Therefore simply startup the container and mount the python venv to our IDE and the jupyter notebook.
 Simply execute the following lines:
-
 ```
-docker build -t neural_transfer .
+docker build -t artsy_jupyter .
 ```
-Now we need to start our builded docker container:
-
+It takes probably some minutes to build up the docker container. Now we need to start our builded docker container using docker compose:
 ```
 docker compose up -d
 ```
+Now a JuypterLab installation is running locally. You can enter the script by opening the following link: [localhost:8888](localhost:888). 
+
+**Important: The password is `artsy`**
 
 To shut down the container:
 
 ```
 docker compose down
 ```
-
-```
-jupyter execute neural_transfer.ipynb
-```
-
-And connect the running container to your IDE.
 
 ### Without Docker
 If you don't have Docker and Docker Desktop available, please create a python virtual environment, see [Python env](https://docs.python.org/3/library/venv.html). Or you can use [Poetry](https://python-poetry.org/). 

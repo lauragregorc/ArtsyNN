@@ -1,6 +1,11 @@
 services:
-  ki_ident_processor:
-    image: neural_transfer
-    container_name: neural_transfer_processor
+  jupyter:
+    image: artsy_jupyter
+    ports:
+      - 8888:8888
+    environment:
+      - JUPYTER_TOKEN=artsy
+    volumes:
+      - ./:/~/work
     restart: unless-stopped
-    entrypoint: /bin/sh -c 'tail anything -F'  # -F for endless and anything for entrypoint
+

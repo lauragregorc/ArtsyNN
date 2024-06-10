@@ -1,15 +1,12 @@
-FROM python:3.12.4-slim-bullseye
+FROM jupyter/minimal-notebook:python-3.11.6
 
-COPY . /src
+COPY ./src /work
 
-WORKDIR /src
-
-# Terminal requirements
-RUN apt-get update && apt-get install vim -y
-RUN apt-get install -y iputils-ping curl
+WORKDIR /work
 
 # python 
 RUN pip install --upgrade pip
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+
