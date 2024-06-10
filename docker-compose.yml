@@ -2,10 +2,10 @@ services:
   jupyter:
     image: artsy_jupyter
     ports:
-      - 8888:8888
+      - 7777:8888
     environment:
       - JUPYTER_TOKEN=artsy
     volumes:
       - ./:/~/work
     restart: unless-stopped
-
+    entrypoint: sh -c 'jupyter lab --notebook-dir=/work --allow-root'

@@ -28,10 +28,10 @@ It takes probably some minutes to build up the docker container. Now we need to 
 ```
 docker compose up -d
 ```
-Now a JuypterLab installation is running locally. You can enter the script by opening the following link: [localhost:8888](localhost:888). 
+Now a JuypterLab installation is running locally. You can enter the script by opening the following link: [localhost:7777](localhost:7777). 
 
 **Important: The password is `artsy`**
-
+We want to check the file `neural_transfer.ipynb`.
 To shut down the container:
 
 ```
@@ -40,17 +40,15 @@ docker compose down
 
 ### Without Docker
 If you don't have Docker and Docker Desktop available, please create a python virtual environment, see [Python env](https://docs.python.org/3/library/venv.html). Or you can use [Poetry](https://python-poetry.org/). 
-#### Poetry
-```
-peotry install
-```
 
 ##### Pip
+If you have pip installed on Windows, you can install the dependencies as followed.
 ```
-python -m .venv install -r requirements.txt
+python -m venv .venv
+./.venv/Scripts/activate
+pip install -r requirements.txt
 ``` 
-
-
+Now, you have to connect your IDE to the virtual environment.
 ### Advances Topics
 
 Check out the segmentation page: [alexjc/neural-doodle](https://github.com/alexjc/neural-doodle)
