@@ -7,6 +7,6 @@ services:
       - JUPYTER_TOKEN=artsy
       - GRANT_SUDO=1
     volumes:
-      - ./:/~/work
+      - ./src:/src
     restart: unless-stopped
-    entrypoint: sh -c 'jupyter lab --notebook-dir=/work --allow-root'
+    entrypoint: sh -c 'jupyter lab --notebook-dir=/src --allow-root'

@@ -1,5 +1,5 @@
-output/*
+/src/output/*
 /cache
 /.venv
 /Include
-!output
+!/src/output/forrest.jpg
