@@ -19,7 +19,8 @@ Advanced approach, where segmentation maps are used in order to define classes. 
 - [/src/output](/output) This directory saves all generated images.
 
 ## Usage
-This repository is deployed with docker. But the jupyterlab requires a python kernel. Therefore simply startup the container and mount the python venv to our IDE and the jupyter notebook.
+This repository is deployed with docker. In oder to use a jupyter notebook, we require a python kernel. Therefore simply build and startup the container for a integrated IDE in your browser. If you don't have Docker avilable, you can create your own virtual environment and use it directly in your IDE and the jupyter notebook.
+
 Simply execute the following lines:
 ```
 docker build -t artsy_jupyter .

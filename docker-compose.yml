@@ -5,6 +5,7 @@ services:
       - 7777:8888
     environment:
       - JUPYTER_TOKEN=artsy
+      - GRANT_SUDO=1
     volumes:
       - ./:/~/work
     restart: unless-stopped
