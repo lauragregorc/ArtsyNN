@@ -3,7 +3,7 @@ FROM jupyter/minimal-notebook:python-3.11.6
 # Change to root in order to create folders, change paths,...
 USER root
 
-COPY . /work
+COPY . ./work
 
 WORKDIR /work/src
 

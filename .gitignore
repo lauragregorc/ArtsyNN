@@ -1,5 +1,10 @@
 /src/output/*
 /cache
+/src/.ipynb_checkpoints
 /.venv
 /Include
-!/src/output/forrest.jpg
+!/src/output/ocean.jpg
+.DS_Store
+src/.DS_Store
+src/input/.DS_Store
+src/input/.ipynb_checkpoints
