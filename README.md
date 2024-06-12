@@ -29,7 +29,7 @@ It takes probably some minutes to build up the docker container. Now we need to 
 ```
 docker compose up -d
 ```
-Now a JuypterLab installation is running locally. You can enter the script by opening the following link: [localhost:7777](localhost:7777). 
+Now a JuypterLab installation is running locally. You can enter the script by opening the following link: [localhost:7777](http://localhost:7777). 
 
 **Important: The password is `artsy`**
 We want to check the file `neural_transfer.ipynb`.
