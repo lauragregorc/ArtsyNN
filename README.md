@@ -18,7 +18,7 @@ Advanced approach, where segmentation maps are used in order to define classes. 
 - [/src/input](/input) Some example style and content images are provided in the directory input.
 - [/src/output](/output) This directory saves all generated images.
 
-## Usage
+## Installation
 This repository is deployed with docker. In oder to use a jupyter notebook, we require a python kernel. Therefore simply build and startup the container for a integrated IDE in your browser. If you don't have Docker avilable, you can create your own virtual environment and use it directly in your IDE and the jupyter notebook.
 
 Simply execute the following lines:
@@ -50,6 +50,10 @@ python -m venv .venv
 pip install -r requirements.txt
 ``` 
 Now, you have to connect your IDE to the virtual environment.
+
+## Usage
+In order to train your very own art piece, you have add you content and style image to the `input` folder in the running jupyterlab.  Of course, you can use the example images already provided in the folder. Additionally, you have to change the two paths `CONTENT_IMG_PATH` and `STYLE_IMG_PATH`. Every image pair is processed individually. Then just execute all of the cells in the `neural_transfer.ipynb` file. There are some explanations included in the code. In the `output` folder you can find your created art transfer image!
+
 ### Advances Topics
 
 Check out the segmentation page: [alexjc/neural-doodle](https://github.com/alexjc/neural-doodle)
